@@ -1,5 +1,5 @@
-import { Column } from '../cassandra/decorators/column.decorator';
-import { Model } from '../cassandra/decorators/model.decorator';
+import { Column } from '../../cassandra/decorators/column.decorator';
+import { Model } from '../../cassandra/decorators/model.decorator';
 
 @Model({ table: 'users_by_id' })
 export class UserModel {

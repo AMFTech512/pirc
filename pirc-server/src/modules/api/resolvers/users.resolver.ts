@@ -1,9 +1,9 @@
 import { Injectable, ParseIntPipe } from '@nestjs/common';
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
-import { InjectRepository } from '../cassandra/decorators/inject-repository.decorator';
-import { Repository } from '../cassandra/lib/repository';
-import { UserModel } from './user.model';
-import { SignupInput } from '../../graphql';
+import { InjectRepository } from '../../cassandra/decorators/inject-repository.decorator';
+import { Repository } from '../../cassandra/lib/repository';
+import { UserModel } from '../models/user.model';
+import { SignupInput } from '../../../graphql';
 
 @Injectable()
 @Resolver()

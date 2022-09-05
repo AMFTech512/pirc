@@ -4,7 +4,7 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from '../users/users.module';
+import { ApiModule } from '../api/api.module';
 import { CassandraModule } from '../cassandra/cassandra.module';
 
 // create an instance of the graphql module
@@ -21,7 +21,7 @@ const graphqlModule = GraphQLModule.forRoot<ApolloDriverConfig>({
   imports: [
     CassandraModule.forRoot({ host: 'localhost', port: 9042 }),
     graphqlModule,
-    UsersModule,
+    ApiModule,
   ],
   controllers: [AppController],
   providers: [AppService],
