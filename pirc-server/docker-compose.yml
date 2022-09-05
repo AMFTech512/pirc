@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  # https://hub.docker.com/r/scylladb/scylla
+  some-scylla:
+    image: scylladb/scylla
+    container_name: pirc-scylla-1
+    ports:
+      - '9042:9042'

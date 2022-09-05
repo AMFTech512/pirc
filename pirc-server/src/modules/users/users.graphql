@@ -1,0 +1,23 @@
+type Query {
+  user(id: ID!): User
+}
+
+type Mutation {
+  signup(input: SignupInput!): User
+}
+
+enum Gender {
+  male
+  female
+}
+
+type User {
+  id: Int
+  username: String
+  gender: Gender
+}
+
+input SignupInput {
+  username: String
+  gender: Gender
+}
